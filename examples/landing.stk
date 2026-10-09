@@ -1,0 +1,117 @@
+<page title="Stack — Write less. Ship beautiful sites." theme="midnight">
+
+  <navbar brand="Stack" links="Features:#features, Themes:#themes, Docs:#docs, GitHub:https://github.com/NishantGits/stack-lang" />
+
+  <hero
+    title="Write less. Ship beautiful sites."
+    subtitle="Stack combines HTML, CSS, JavaScript and Markdown into one elegant language with built-in components, themes and icons."
+    cta="Get Started:#docs"
+    secondary="View on GitHub:https://github.com/NishantGits/stack-lang"
+  />
+
+  <section title="Everything you need" subtitle="A small language that feels complete.">
+    <grid cols="3">
+      <card icon="zap" title="Instant static output">One command turns your .stk file into a single, fast HTML page. No bundler required.</card>
+      <card icon="palette" title="Six professional themes">Midnight, Aurora, Paper, Cyberpunk, Forest and Ocean. Switch with one attribute.</card>
+      <card icon="sparkles" title="Lucide icons built-in">1500+ beautiful icons via CDN. Just write icon="zap" and they appear.</card>
+      <card icon="file-text" title="Markdown first-class">Drop md blocks anywhere. Full CommonMark support ready.</card>
+      <card icon="blocks" title="Ready components">Navbar, hero, cards, grids, counters, buttons and more — all theme-aware.</card>
+      <card icon="terminal" title="Delightful CLI">stk build, stk dev with live reload, stk themes, and stk init.</card>
+    </grid>
+  </section>
+
+  <section title="Live counter" subtitle="Interactive components work out of the box.">
+    <div style="display:flex;justify-content:center;padding:1rem 0 2rem">
+      <counter start="0" />
+    </div>
+  </section>
+
+  <section title="Choose your vibe" subtitle="Six carefully crafted themes.">
+    <grid cols="3">
+      <card icon="moon" title="Midnight">Deep dark with electric indigo.</card>
+      <card icon="waves" title="Aurora">Soft dark with teal and violet glow.</card>
+      <card icon="sun" title="Paper">Warm light theme with amber accents.</card>
+      <card icon="cpu" title="Cyberpunk">Neon pink on pure black.</card>
+      <card icon="tree-pine" title="Forest">Earthy greens and warm browns.</card>
+      <card icon="droplets" title="Ocean">Deep blue with sky accents.</card>
+    </grid>
+  </section>
+
+  <section title="Get started in 30 seconds">
+    <md>
+### 1. Run the CLI
+
+    node bin/stk.js dev examples/landing.stk
+
+### 2. Scaffold a new project
+
+    node bin/stk.js init my-site
+
+### 3. Build for production
+
+    node bin/stk.js build index.stk -o dist
+    </md>
+  </section>
+
+  <section title="Deploy to Vercel">
+    <md>
+**CLI**
+
+    node bin/stk.js build index.stk -o public
+    npx vercel --prod
+
+**GitHub**
+
+1. Push repo.
+2. Import on vercel.com.
+3. Build Command: node bin/stk.js build index.stk -o public
+4. Output Directory: public
+    </md>
+  </section>
+
+  <footer>Built with Stack · Open source · MIT License</footer>
+</page>
+EOF
+
+# ── README.md ─────────────────────────────────────────────────
+cat > README.md << 'EOF'
+# Stack
+
+**Write less. Ship beautiful sites.**
+
+Stack combines HTML, CSS, JavaScript and Markdown into one elegant file.
+Six professional themes, Lucide icons, ready components, zero-dependency CLI.
+
+    node bin/stk.js dev examples/landing.stk
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| stk build file | Compile .stk to static HTML |
+| stk dev file | Live-reload dev server |
+| stk themes | List themes |
+| stk init [name] | Scaffold new project |
+| stk help | Help |
+
+    node bin/stk.js build site.stk -o public --theme aurora
+    node bin/stk.js dev site.stk --port 4000
+
+## Themes
+
+midnight · aurora · paper · cyberpunk · forest · ocean
+
+    <page theme="aurora">
+
+## Deploy to Vercel
+
+    node bin/stk.js build index.stk -o public
+    npx vercel --prod
+
+Or on Vercel dashboard:
+- Build Command: node bin/stk.js build index.stk -o public
+- Output Directory: public
+
+## License
+
+MIT

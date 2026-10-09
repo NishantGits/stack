@@ -1,0 +1,17 @@
+{
+  "name": "stack-lang",
+  "version": "1.2.0",
+  "description": "Stack — HTML + CSS + JS + Markdown with themes & components",
+  "main": "src/compiler.js",
+  "bin": { "stk": "./bin/stk.js" },
+  "scripts": {
+    "build": "node bin/stk.js build examples/landing.stk",
+    "dev": "node bin/stk.js dev examples/landing.stk",
+    "start": "node bin/stk.js dev examples/landing.stk",
+    "themes": "node bin/stk.js themes"
+  },
+  "keywords": ["stack","stk","html","markdown","components","themes"],
+  "author": "Nishant",
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}
